@@ -1,0 +1,70 @@
+/* NavBar.css */
+
+/* Optional: Basic body reset */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f0f0f0; /* Example background for contrast below navbar */
+  }
+  
+  .navbar {
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Push logo left and links right */
+    background-color: #0a192f; /* Dark blue background for the whole bar */
+    padding: 15px 5%; /* Vertical padding, Horizontal padding (percentage for responsiveness) */
+    width: 100%; /* Make the navbar span the full width */
+    box-sizing: border-box; /* Include padding in the element's total width */
+  }
+  
+  .logo {
+    color: #ffffff; /* White logo text */
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 0; /* Remove default margin */
+  }
+  
+  .nav-links {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Arrange links horizontally */
+    align-items: center; /* Vertically center items in the list */
+  
+    /* --- Glassmorphism Effect (Applied ONLY to the links container) --- */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* The blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    border-radius: 50px; /* Highly rounded corners */
+    padding: 8px 15px; /* Padding inside the glass container */
+    border: 1px solid rgba(255, 255, 255, 0.18); /* Subtle border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .nav-links li {
+    margin: 0 5px; /* Spacing BETWEEN link items inside the glass container */
+  }
+  
+  .nav-links a {
+    color: #e0f2ff; /* Light blue/white text color for links */
+    text-decoration: none;
+    padding: 10px 18px; /* Padding inside each link for click area */
+    border-radius: 30px; /* Rounded corners for the link itself */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    display: block; /* Ensure padding works correctly */
+    font-size: 0.9em;
+    font-weight: 500;
+  }
+  
+  /* Style for the active link */
+  .nav-links a.active {
+    background-color: #ffffff; /* White background for active link */
+    color: #0a192f; /* Dark text color for active link */
+    font-weight: bold;
+  }
+  
+  /* Optional: Hover effect for non-active links */
+  .nav-links a:not(.active):hover {
+    background-color: rgba(255, 255, 255, 0.15); /* Slightly lighter background on hover */
+    color: #ffffff; /* White text on hover */
+  }

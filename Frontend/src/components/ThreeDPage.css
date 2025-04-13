@@ -1,0 +1,159 @@
+/* ThreeDPage.css */
+
+/* --- Base Container --- */
+.three-d-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    padding: 40px 20px;
+    /* Forest background from the example */
+    background: url('https://i.pinimg.com/736x/2a/a7/8a/2aa78a2c8fbe91b37bfed0fbb32fae82.jpg') no-repeat center center fixed;
+    background-size: cover;
+    box-sizing: border-box;
+  }
+  
+  /* --- Content Card --- */
+  .three-d-card {
+    /* Glassmorphism Effect */
+    background: rgba(30, 30, 40, 0.6); /* Darker, less transparent background */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  
+    color: #e0f2ff; /* Light text color */
+    padding: 30px 35px;
+    width: 90%;
+    max-width: 600px; /* Increased max-width slightly */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  /* --- Title --- */
+  .three-d-card h1 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 1.8em; /* Slightly larger title */
+    color: #ffffff; /* White title */
+  }
+  
+  /* --- Form Elements Container --- */
+  .form-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Make buttons fill width */
+    width: 100%;
+    margin-bottom: 20px;
+    gap: 15px; /* Add space between form elements */
+  }
+  
+  
+  /* --- Custom File Input --- */
+  /* Hide the actual input */
+  input[type="file"].file-input-hidden {
+    display: none;
+  }
+  
+  /* Style the label like the light button */
+  .custom-file-upload-label {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: inline-block;
+    padding: 12px 18px; /* Slightly larger padding */
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e0f2ff;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .custom-file-upload-label:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* --- Upload/Convert Button (Primary Action) --- */
+  .upload-button {
+    background-color: #4a5568; /* Dark slate color */
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .upload-button:hover:not(:disabled) {
+    background-color: #5a677d; /* Slightly lighter on hover */
+  }
+  
+  .upload-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: #334155; /* Keep it darker when disabled */
+  }
+  
+  /* --- Status/Loading Message --- */
+  .status-message {
+    margin: 15px 0;
+    font-weight: 500;
+    font-size: 0.95em;
+    padding: 10px 15px;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #a0c4ff; /* Light blue for loading */
+    background-color: rgba(66, 153, 225, 0.1);
+    border: 1px solid rgba(66, 153, 225, 0.3);
+  }
+  
+  /* --- 3D Viewer Container --- */
+  .three-container {
+    width: 100%;
+    height: 400px; /* Give it a fixed height */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.1); /* Slightly darker background for contrast */
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden; /* Ensure the canvas doesn't overflow */
+  }
+  
+  /* Ensure the canvas fills the container */
+  .three-container canvas {
+      display: block;
+      width: 100% !important; /* Override potential inline styles */
+      height: 100% !important;
+  }
+  
+  
+  /* --- Download Link --- */
+  .download-link {
+    margin-top: 10px;
+    display: inline-block; /* Allows padding and margin */
+    padding: 8px 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e0f2ff;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 500;
+  }
+  
+  .download-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+  }

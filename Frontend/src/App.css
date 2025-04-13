@@ -1,0 +1,24 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: #282c34;
+  color: #fff;
+}
+.logo {
+  flex-grow: 1;
+  font-size: 1.2rem;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.nav-links a {
+  color: #61dafb;
+  text-decoration: none;
+}
+.nav-links a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
